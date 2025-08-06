@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lane Racer By Saqib</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="ChatGPT Image Jun 25, 2025, 10_21_26 PM.png" type="image/x-icon">
+    <meta name="description"
+        content="Play Lane Racer by Saqib — A fast-paced 2D racing game built with HTML, CSS, and JavaScript!">
+    <meta name="theme-color" content="#000000">
+
+</head>
+
+<body>
+    <img src="controls.png" alt="" class="help">
+    <div class="logo">
+        <img src="ChatGPT Image Jun 25, 2025, 10_21_26 PM.png" alt="" width="244px">
+    </div>
+
+    <div class="game-container">
+        <div id="score">Score: 0</div>
+
+        <div class="player-car">
+            <audio src="Car Crash Sound Effect [FREE DOWNLOAD _ ROYALTY FREE].mp4" id="crashSound"
+                style="display: none;"></audio>
+                <img src="explosion.gif" id="explode">
+                <img src="car.png" alt="">
+
+        </div>
+
+        <div class="enemy-car">
+            <img src="car.png" alt="">
+        </div>
+
+
+        <div class="road-line" style="top: 0px;"></div>
+        <div class="road-line" style="top: 200px;"></div>
+        <div class="road-line" style="top: 400px;"></div>
+
+        <div id="game-over" style="display: none;">
+            <img src="Untitled__1_-removebg-preview.png" alt="" width="145px"><br>
+            <button onclick="location.reload()">Restart</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

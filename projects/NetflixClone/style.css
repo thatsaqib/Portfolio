@@ -1,0 +1,664 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.back {
+    background-image: url(assets/HeroImage.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: max(2200px, 100vw);
+    position: relative;
+    height: 97vh;
+    width: 100%;
+    margin: auto;
+
+}
+
+.back .box {
+    height: 97vh;
+    width: 100%;
+    opacity: 0.85;
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    flex-wrap: wrap;
+
+}
+
+nav img {
+    color: red;
+    position: relative;
+    align-self: center;
+}
+
+nav button {
+    position: relative;
+    background-color: rgb(229, 9, 20);
+    color: white;
+    border: none;
+    font-weight: 700;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: rgb(197, 0, 10);
+}
+
+@media screen and (max-width:1300px) {
+    nav {
+        gap: 25vw
+    }
+
+    nav img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width:256px) {
+    nav img {
+        width: 100px;
+    }
+
+    nav {
+        gap: 2vw;
+    }
+}
+
+@media screen and (min-width:1300px) {
+    nav img {
+        width: 185px;
+    }
+
+    nav {
+        gap: 61vw;
+    }
+}
+
+/* --Responsive Head Done now I Will Make Its Text */
+.HeadText {
+    color: white;
+    position: relative;
+    flex-direction: column;
+    align-content: center;
+    z-index: 20;
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.HeadText h1 {
+    position: relative;
+    top: 120px;
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+
+.HeadText h3 {
+    position: relative;
+    top: 120px;
+    font-weight: 600;
+    font-size: large;
+}
+
+.HeadText h4 {
+    position: relative;
+    top: 150px;
+    font-weight: lighter;
+}
+
+/* --Text Done now I Will Create Email Form */
+.form {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 50;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.form input {
+    width: 235px;
+    text-align: left;
+    position: relative;
+    z-index: 50;
+    margin-top: 170px;
+    background-color: #212121a3;
+    border: 1px solid gray;
+    border-radius: 3px;
+    color: white;
+    padding-bottom: 20px;
+    padding-right: 100px;
+    padding-left: 12px;
+    padding-top: 22px;
+
+}
+
+label {
+    position: relative;
+    z-index: 50;
+}
+
+input::placeholder {
+    position: relative;
+    z-index: 50;
+    color: #aaa;
+    font-size: 1em;
+    font-weight: 540;
+}
+
+.form button {
+    background-color: rgb(229, 9, 20);
+    border: none;
+    margin-top: 170px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(178 7 16);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width:530px) {
+    .GetStarted {
+        font-weight: normal;
+        text-align: center;
+        margin: 10px;
+        padding: 2px;
+    }
+
+    .form input {
+        width: 100px;
+    }
+
+    .form {
+        flex-wrap: nowrap;
+    }
+}
+
+/* Top Done now I Will Create Trending Section */
+.curve {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 125vw;
+    position: relative;
+    bottom: 30px;
+
+
+}
+
+.part {
+    right: 9%;
+    position: relative;
+    z-index: 100;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    /* background-image: linear-gradient(top center to bottom, red, rgb(255, 0, 195)); */
+    background: linear-gradient(to right, rgb(255, 53, 124), #ff0000, #333);
+    border-bottom: none;
+    box-sizing: border-box;
+    bottom: 10px;
+    width: 130%;
+    height: 100px
+}
+
+.glow {
+    align-self: center;
+    border-radius: 44%;
+    position: absolute;
+    z-index: 110;
+    height: 230px;
+    width: 100%;
+    top: 5px;
+    /* margin: 10px 10px 500px 500px; */
+    background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
+}
+
+.trending h2 {
+    color: white;
+    margin: -72px 105px;
+    position: relative;
+    z-index: 150;
+    font-weight: 600;
+
+}
+
+@media screen and (max-width:700px) {
+    .trending h2 {
+        text-align: center;
+    }
+
+}
+
+section {
+    position: relative;
+    z-index: 150;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+section div img {
+    align-self: center;
+    margin-bottom: 45px;
+    margin-top: 110px;
+    /* padding: 25px; */
+    width: 185px;
+    height: 270px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:700px) {
+    section div img {
+        align-self: center;
+        margin-bottom: 25px;
+        margin-top: 80px;
+        width: 85px;
+        height: 150px;
+    }
+}
+
+.trending h2 {
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+
+@media screen and (max-width:900px) {
+    section div img {
+        align-self: center;
+        margin-bottom: 25px;
+        margin-top: 80px;
+        width: 125px;
+        height: 175px;
+    }
+
+}
+
+
+
+.reasons .reas {
+    /* margin: 10px 10px 5px 5px ; */
+    border-radius: 15px;
+    background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    height: 300px;
+    width: 240px;
+    position: relative;
+    z-index: 200;
+    padding: 5px;
+}
+
+.tv {
+    margin-left: auto;
+}
+
+.kids {
+    margin-right: auto;
+}
+
+.reasons {
+    display: flex;
+    gap: 25px;
+    color: white;
+}
+
+.reas h2 {
+    padding: 20px 15px 0px 15px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.reas p {
+    color: rgb(152, 152, 152);
+    padding: 5px 0px 0px 15px;
+    font-weight: 400;
+}
+
+.To {
+    padding-left: 140px;
+    padding-bottom: 15px;
+    position: relative;
+    z-index: 250;
+    color: white;
+}
+
+.tv img {
+    padding-top: 69px;
+    padding-left: 134px;
+}
+
+.watch img {
+    padding-top: 39px;
+    padding-left: 134px;
+}
+
+.everywhere img {
+    padding-top: 100px;
+    padding-left: 149px;
+
+}
+
+.kids img {
+    padding-top: 55px;
+    padding-left: 149px;
+
+}
+
+.FAQs {
+    display: flex;
+    gap: 10px;
+}
+
+.FAQs h2 {
+    color: white;
+    padding-left: 139px;
+    padding-top: 15px;
+    display: flex;
+}
+
+.Faq {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+
+}
+
+.Faq h2 {
+    color: white;
+    font-weight: normal;
+    margin: 5px -10px auto;
+    width: 70vw;
+    height: 44px;
+    background-color: rgb(48, 48, 48);
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.Faq h2 .f {
+    font-size: 30px;
+    padding-left: 724px;
+}
+
+.Faq h2 .g {
+    font-size: 30px;
+    padding-left: 900px;
+    position: relative;
+    bottom: 34px;
+
+}
+
+.Faq h2 .h {
+    font-size: 30px;
+    padding-left: 900px;
+    position: relative;
+    bottom: 34px;
+}
+
+.Faq h2 .j {
+    font-size: 30px;
+    padding-left: 901px;
+    position: relative;
+    bottom: 34px;
+}
+
+.Faq h2 .k {
+    font-size: 30px;
+    padding-left: 902px;
+    position: relative;
+    bottom: 34px;
+}
+
+.Faq h2 .l {
+    font-size: 30px;
+    padding-left: 902px;
+    position: relative;
+    bottom: 33px;
+}
+
+.Faq h2 {
+    cursor: pointer;
+
+}
+
+.Faq h2:hover {
+    background-color: rgb(79, 79, 79);
+}
+
+h2 span {
+    position: relative;
+    z-index: 650;
+}
+
+/* Done Only Form & Footer incomplete */
+.Formm {
+    padding-top: 0px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 50;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.Formm input {
+    width: 235px;
+    text-align: left;
+    position: relative;
+    z-index: 50;
+    margin-top: 170px;
+    background-color: #212121a3;
+    border: 1px solid gray;
+    border-radius: 3px;
+    color: white;
+    padding-bottom: 20px;
+    padding-right: 300px;
+    padding-left: 12px;
+    padding-top: 22px;
+
+}
+
+label {
+    position: relative;
+    z-index: 50;
+}
+
+input::placeholder {
+    position: relative;
+    z-index: 50;
+    color: #aaa;
+    font-size: 1em;
+    font-weight: 540;
+}
+
+.Formm button {
+    background-color: rgb(229, 9, 20);
+    border: none;
+    margin-top: 170px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 25px;
+    padding-left: 25px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.ready {
+    color: white;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 154px;
+    font-weight: 400;
+    font-size: large;
+}
+
+footer p a {
+    position: relative;
+    z-index: 750;
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration-color: rgba(255, 255, 255, 0.7);
+}
+
+footer>p {
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    column-gap: 85px;
+    row-gap: 15px;
+    /* flex-wrap: wrap; */
+    padding-left: 150px;
+    padding-top: 145px;
+
+}
+
+footer .seco {
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    column-gap: 85px;
+    row-gap: 15px;
+    padding-left: 400px;
+    position: relative;
+    bottom: 276px;
+
+}
+
+.thir {
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    column-gap: 85px;
+    row-gap: 15px;
+    padding-left: 650px;
+    position: relative;
+    bottom: 551px;
+
+}
+
+.four {
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    column-gap: 85px;
+    row-gap: 15px;
+    padding-left: 900px;
+    position: relative;
+    bottom: 825px;
+
+}
+
+footer>a {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration-color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    left: 144px;
+    top: 94px;
+}
+
+.QA {
+    position: relative;
+    z-index: 780;
+}
+
+.lang {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid rgb(136, 136, 136);
+    background-color: rgba(36, 36, 36, 0.396);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    bottom: 766px;
+    left: 150px;
+    font-size: medium;
+    cursor: pointer;
+}
+.lang:hover{
+    background-color: rgba(36, 36, 36, 0.396) ;
+}
+footer button span{
+    font-size: smaller;
+}
+footer h5{
+    color: rgba(255, 255, 255, 0.7);
+    bottom: 714px;
+    position: relative;
+    left: 150px;
+    font-weight: 600;
+}
+footer{
+    height: 400px;
+    margin-bottom: 0;
+    padding-bottom: 20px 0;
+    overflow: hidden;
+}

@@ -1,0 +1,82 @@
+       * {
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       }
+
+       body {
+           background-image: linear-gradient(to bottom left, rgb(0 90 255), rgb(255 255 255));
+           background-repeat: no-repeat;
+           height: 92.5vh;
+           box-sizing: border-box;
+       }
+
+
+       .container {
+           display: grid;
+           justify-content: center;
+           align-items: center;
+           width: 455px;
+           height: 556px;
+           background: linear-gradient(to left, rgb(184, 3, 184), rgb(247, 53, 85));
+           margin: auto;
+           margin-top: 55px;
+           border-radius: 55px;
+           position: relative;
+           border: 2px solid;
+       }
+
+       input {
+           width: 318px;
+           height: 50px;
+           position: relative;
+           border-radius: 20px;
+           bottom: 50%;
+           border: 2px solid;
+           left: -2px;
+           box-shadow: -10px 6px 20px -3px white;
+           font-size: 20px;
+           font-weight: 400;
+           text-align: center;
+       }
+
+       .logo {
+           font-size: 3rem;
+           color: white;
+           position: absolute;
+           border-radius: 20px;
+           border: none;
+           top: 16px;
+           font-weight: 900;
+           left: 12%;
+       }
+
+       .txt {
+           color: #ffffff;
+           font-weight: 700;
+           position: relative;
+           bottom: -54px;
+           font-size: larger;
+       }
+
+       #result {
+           position: absolute;
+           top: 69%;
+           left: 24%;
+           font-weight: 900;
+           font-size: xx-large;
+           color: white;
+       }
+
+       button {
+           position: absolute;
+           top: 58%;
+           left: 37%;
+           padding: 10px 15px 10px 15px;
+           border: none;
+           border-radius: 20px;
+           background-color: #428c22;
+           color: white;
+           cursor: pointer;
+        }
+        button:hover{
+           background-color: #30581f;
+       }

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Music Player</title>
+    <link rel="stylesheet" href="Playerstyle.css">
+</head>
+
+<body>
+    <section>
+        <div class="left">
+            <div class="playlist">
+                <img src="https://cdn.hugeicons.com/icons/playlist-02-bulk-rounded.svg" alt="playlist-02" width="32"
+                    height="32">
+                <h1>Your Playlists</h1>
+            </div>
+            <div class="songlist">
+                <ul></ul>
+            </div>
+            <div class="grid-1">
+                <span>Legal</span>
+                <span>Safety & Privacy Center</span>
+                <span>Privacy Policy</span>
+                <span>Cookies</span>
+                <span class="last">About Ads</span>
+                <span class="last">Accessibility</span>
+                <li class="Cookies">Cookies</li>
+            </div>
+
+            <button class="lang button"><img src="Assests/globe.png" alt="lang" width="16px">English</button>
+        </div>
+        <div class="right">
+            <div class="hero-image">
+                <img src="Assests/hero-img.jpg" alt="" class="car">
+                <img src="Assests/Song4.png" alt="" class="Poster">
+            </div>
+            <div class="controls">
+                <div class="seek">
+                    <div class="circle"></div>
+                </div>
+                <div class="prev">
+                    <img src="https://cdn.hugeicons.com/icons/previous-solid-rounded.svg" alt="previous" width="32"
+                        height="32">
+                </div>
+                <div class="play"><img src="https://cdn.hugeicons.com/icons/play-circle-solid-standard.svg"
+                        alt="play-circle" width="32" height="32"></div>
+                <div class="pause"><img src="https://cdn.hugeicons.com/icons/pause-circle-solid-standard.svg"
+                        alt="play-circle" width="32" height="32"></div>
+                <div class="next"><img src="https://cdn.hugeicons.com/icons/next-solid-rounded.svg" alt="next"
+                        width="32" height="32"></div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <script src="player.js"></script>
+
+    <audio id="audioPlayer" controls style="display: none;"></audio>
+
+</body>
+
+</html>

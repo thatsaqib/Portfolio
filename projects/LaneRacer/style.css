@@ -1,0 +1,174 @@
+/* Reset default margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  overflow: hidden;
+  background-image: linear-gradient(to bottom left, #000000, #0a0f13);
+}
+
+/* Game Container */
+.game-container {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background: #1e1e1e;
+  border: 3px solid #fff;
+  margin: 25px auto;
+  overflow: hidden;
+  bottom: 115vh;
+  border-radius: 20px;
+}
+
+/* Player Car */
+/* Player Car */
+.player-car {
+  position: absolute;
+  bottom: 20px;
+  left: 155px;
+  width: 60px;
+  /* Adjusted for accurate hitbox */
+  height: 100px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.player-car img {
+  width: 125%;
+  height: 90%;
+  object-fit: contain;
+  filter: hue-rotate(120deg) brightness(2);
+  pointer-events: none;
+}
+
+/* Enemy Car */
+.enemy-car {
+  position: absolute;
+  top: -120px;
+  left: 170px;
+  width: 60px;
+  height: 100px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.enemy-car img {
+  width: 125%;
+  height: 90%;
+  object-fit: contain;
+  transform: rotate(180deg);
+  pointer-events: none;
+}
+
+
+/* Road Lines */
+.road-line {
+  position: absolute;
+  width: 10px;
+  height: 80px;
+  background: white;
+  left: 150px;
+  top: 0;
+
+}
+
+/* Score */
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  z-index: 3;
+}
+
+/* Game Over */
+#game-over {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #ffffffcc;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 5;
+}
+
+#game-over button {
+  color: #000000;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid #f72b02;
+  background-color: #00d6f7;
+}
+
+.logo {
+  display: flex;
+  justify-content: left;
+  position: relative;
+  bottom: 80vh;
+}
+
+
+.logo img {
+  border-radius: 10px;
+  border: 2px solid white;
+  margin: 30px;
+  position: relative;
+  top: 50px;
+  width: 295px;
+  height: 295px;
+}
+
+.help {
+  position: relative;
+  z-index: 50;
+  width: 295px;
+  height: 295px;
+  margin: 100px;
+  top: -69px;
+  left: 1081px;
+  border-radius: 15px;
+  border: 2px solid white;
+}
+
+#explode {
+  filter: none;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width:405px) {
+
+  .logo,
+  .help {
+    display: none;
+  }
+
+  .logo img {
+    display: none;
+  }
+
+  .game-container {
+    top: 10px;
+  }
+
+}
