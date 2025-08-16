@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lane Racer By Saqib</title>
+    <title>Lane Racer</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="ChatGPT Image Jun 25, 2025, 10_21_26 PM.png" type="image/x-icon">
-    <meta name="description"
-        content="Play Lane Racer by Saqib — A fast-paced 2D racing game built with HTML, CSS, and JavaScript!">
-    <meta name="theme-color" content="#000000">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <img src="controls.png" alt="" class="help">
-    <div class="logo">
-        <img src="ChatGPT Image Jun 25, 2025, 10_21_26 PM.png" alt="" width="244px">
-    </div>
-
     <div class="game-container">
-        <div id="score">Score: 0</div>
-
-        <div class="player-car">
-            <audio src="Car Crash Sound Effect [FREE DOWNLOAD _ ROYALTY FREE].mp4" id="crashSound"
-                style="display: none;"></audio>
-                <img src="explosion.gif" id="explode">
-                <img src="car.png" alt="">
-
+        <div id="start-screen" class="game-screen">
+            <h1>Lane Racer</h1>
+            <p>Use left and right arrow keys or mobile buttons to switch lanes.</p>
+            <div class="button-container">
+                <button id="start-btn" class="ui-button">Start Game</button>
+                <button id="theme-toggle-btn" class="ui-button">Toggle Theme</button>
+            </div>
         </div>
 
-        <div class="enemy-car">
-            <img src="car.png" alt="">
+        <div id="game-over-screen" class="game-screen hidden">
+            <h1>Game Over</h1>
+            <p>Final Score: <span id="final-score">0</span></p>
+            <button id="restart-btn" class="ui-button">Restart</button>
         </div>
 
+        <div id="game-area">
+            <div id="road">
+                <div class="ui-panel">
+                    <div class="ui-item">Score: <span id="score">0</span></div>
+                    <div class="ui-item">Lives: <span id="lives">3</span></div>
+                    <div class="ui-item">Speed: x<span id="speed-multiplier">1.0</span></div>
+                </div>
+            </div>
 
-        <div class="road-line" style="top: 0px;"></div>
-        <div class="road-line" style="top: 200px;"></div>
-        <div class="road-line" style="top: 400px;"></div>
+            <div id="mobile-controls">
+                <button id="left-btn" class="control-btn">&larr;</button>
+                <button id="right-btn" class="control-btn">&rarr;</button>
+            </div>
 
-        <div id="game-over" style="display: none;">
-            <img src="Untitled__1_-removebg-preview.png" alt="" width="145px"><br>
-            <button onclick="location.reload()">Restart</button>
+            <audio id="engine-sound" loop></audio>
+            <audio id="collision-sound"></audio>
+            <audio id="booster-sound"></audio>
         </div>
     </div>
-
-
     <script src="script.js"></script>
 </body>
-
 </html>
