@@ -4,22 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App | Get World Wide Weather Updates</title>
-   <link rel="stylesheet" href="style.css">
-   <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="logo">🌤️WEATHER</div>
-        <div class="txt">Type the city you want the weather</div>
-        <input type="text" id="input">
-        <button id="get-weather">Get Weather 🌦️</button>
-        <div id="result">
-            
+        <div class="theme-toggle">
+            <p id="dark-toggle">🌙</p>
+        </div>
+
+        <h1>Weather App 🌤️</h1>
+        <div class="search">
+            <input type="text" id="cityInput" placeholder="Enter city name...">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="loader" class="loader"></div>
+
+        <div id="weatherResult" class="weather-result">
+            <!-- Weather cards will appear here -->
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 
