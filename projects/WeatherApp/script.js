@@ -63,7 +63,8 @@ async function fetchWeather(city) {
     loader.style.display = "block";
 
     try {
-        const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3&aqi=yes&alerts=yes`);
+        const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3&aqi=yes&alerts=yes`);
+
         const data = await response.json();
 
         if (data.error) {
