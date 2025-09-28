@@ -212,3 +212,370 @@ html, body {
 
 }
 
+/* --- Global Content Centering & Optimization --- */
+/* Ensures all images inside content sections scale down nicely */
+img:not(.profile-pic) {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Media Query for Medium Screens (Tablets, up to 1024px) --- */
+@media (max-width: 1024px) {
+  /* No changes needed here other than your existing ones, as the two-column hero
+     layout is generally still good for tablets. */
+
+  .section-title h2 {
+    font-size: 40px; /* Slightly reduced for tablets */
+  }
+
+  /* Projects Grid - switch to 2 columns for tablets */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* --- Media Query for Small Screens (Mobile, up to 768px) --- */
+@media (max-width: 768px) {
+  /*
+    1. HERO SECTION ALIGNMENT & OPTIMIZATION
+    - hero is already centered with place-items: center;
+    - We need to center the content *inside* the single column hero-inner (text and image).
+  */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    padding: 28px;
+    text-align: center; /* Center all inline content (text, buttons) */
+    max-width: 100%;
+  }
+  .lead {
+    max-width: 100%;
+  }
+  .lead h1 {
+    font-size: 38px;
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the image container */
+    order: -1; /* Move the profile picture above the text on mobile */
+    margin-bottom: 20px;
+  }
+  .profile-pic {
+    width: 120px; /* Optimized image size */
+    height: 120px;
+  }
+
+  /* 2. GENERAL SECTION ALIGNMENT */
+  .section-title {
+    text-align: center;
+  }
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  /* 3. PROJECTS & OTHER GRIDS */
+  .projects-grid {
+    grid-template-columns: 1fr; /* Stack into a single column on mobile */
+  }
+  .about-grid {
+    grid-template-columns: 1fr; /* Ensures single column for about section */
+  }
+
+  /* 4. PRICING GRID ALIGNMENT & OPTIMIZATION */
+  .pricing-grid {
+    grid-template-columns: 1fr; /* Stack plans vertically */
+    max-width: 380px; /* Constrain the width of the stacked plans for better readability */
+    margin: 0 auto; /* Center the stacked pricing grid */
+    gap: 20px;
+  }
+  .plan {
+    padding: 20px;
+  }
+
+  /* 5. CONTACT CARD ALIGNMENT & OPTIMIZATION */
+  .contact-card {
+    flex-direction: column; /* Stack the email info and the button */
+    align-items: center; /* Center items horizontally */
+    text-align: center;
+    padding: 20px;
+    max-width: 350px; /* Constrain its width */
+    margin: 0 auto; /* Center the contact card itself */
+  }
+  .contact-card > div:first-child {
+    margin-bottom: 15px; /* Add spacing between email and button */
+  }
+}
+
+/* --- Optional: Very Small Screens (Phones, up to 480px) --- */
+@media (max-width: 480px) {
+  .hero-inner {
+    padding: 20px;
+  }
+  .lead h1 {
+    font-size: 30px;
+  }
+}
+/* --- Corrected and Complete Responsive Styles --- */
+
+/* --- 1. Medium Screens (Tablets, up to 1024px) --- */
+@media (max-width: 1024px) {
+  /* Adjust hero layout for tablets */
+  .hero-inner {
+    grid-template-columns: 1fr 360px;
+    padding: 40px;
+    gap: 30px;
+  }
+  .intro h1 {
+    font-size: 38px;
+  }
+  
+  /* Stack About section vertically */
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects grid remains two columns (better use of space on tablets) */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Ensure main content has proper padding */
+  main {
+      padding: 0 30px;
+  }
+}
+
+
+/* --- 2. Small Screens (Mobile, up to 768px) - FIXES CENTERING --- */
+@media (max-width: 768px) {
+  
+  /* --- CENTERING AND ALIGNMENT FIXES (Removed the problematic 'right' positioning) --- */
+  .hero, #projects, .contact-card {
+      position: static !important;
+      right: auto !important;
+      width: auto;
+  }
+
+  /* Hiding Nav/Header elements (as per your original CSS) */
+  header, nav ul, .head-logos {
+      display: none !important;
+  }
+
+  /* Global centering and spacing adjustments */
+  .section-title {
+      text-align: center;
+  }
+  main {
+      padding: 0 15px; /* Tighten main padding for mobile */
+      margin: 20px auto;
+  }
+
+  /* --- HERO SECTION CENTERING --- */
+  .hero-inner {
+    grid-template-columns: 1fr; /* Single column */
+    padding: 24px;
+    text-align: center; /* Center all text and inline content */
+  }
+  .intro h1 {
+    font-size: 34px;
+    margin-top: 15px; 
+  }
+  .lead {
+    max-width: 100%;
+    margin: 0 auto 15px;
+  }
+  .cta-row, .key-stats {
+    justify-content: center; /* Center buttons and stats row */
+  }
+
+  /* Profile Card Optimization */
+  .profile-card {
+    order: -1; /* Image above text on mobile */
+    margin: 0 auto 20px; /* Center the card itself and add spacing */
+    max-width: 300px;
+  }
+  .profile-pic {
+    width: 120px; /* Optimized image size */
+    height: 120px;
+  }
+
+  /* --- STACKING GRIDS --- */
+  .skills-grid, 
+  .projects-grid, 
+  .pricing-grid {
+    grid-template-columns: 1fr; /* Stack into a single column */
+  }
+
+  /* Center the stacked pricing plans */
+  .pricing-grid {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  /* --- CONTACT CARD FIX (The 'email box') --- */
+  .contact-card {
+    /* Center the card itself */
+    max-width: 400px;
+    margin: 0 auto;
+    /* Stack content and center it inside the card */
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  /* Prevents any horizontal scrolling */
+  html, body {
+    overflow-x: clip; 
+  }
+}
+
+/* --- 3. Very Small Screens (Phones, up to 480px) --- */
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 28px;
+  }
+  .cta-row {
+      flex-direction: column; /* Stack buttons */
+      align-items: center;
+  }
+  .btn-primary, .btn-ghost {
+      width: 100%;
+      max-width: 250px;
+  }
+  .key-stats {
+      flex-direction: column; /* Stack stats vertically */
+      width: 100%;
+      max-width: 200px;
+      margin: 20px auto 0;
+  }
+  .stat {
+      width: 100%;
+      min-width: unset;
+  }
+}
+
+body {
+  /* Retain your existing font and color properties */
+  font-family: var(--ff);
+  color: #eaf6ff;
+  -webkit-font-smoothing: antialiased;
+
+  /* --- NEW GRID BACKGROUND STYLE with smaller size --- */
+  --grid-color: rgba(26, 188, 254, 0.05); /* Light, transparent blue line color */
+  --grid-size: 15px; /* <-- CHANGED: Makes the grid boxes 15px x 15px */
+  --bg-color: #050611; /* Your existing background variable */
+
+  /* Create two linear gradients: one vertical, one horizontal */
+  background:
+    /* Horizontal lines */
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px) 0 0,
+    /* Vertical lines */
+    linear-gradient(to bottom, var(--grid-color) 1px, var(--bg-color) 1px) 0 0,
+    /* Base Color */
+    var(--bg-color); 
+
+  /* Define the size of the gradient tiles (the grid squares) */
+  background-size: var(--grid-size) var(--grid-size);
+}
+
+/* --- STAR ANIMATION EFFECT: Optimized Density, Speed, and Layers --- */
+
+/* 1. Star Container (No change needed) */
+#stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0; 
+    /* Ensures we see the grid background if the stars are sparse */
+    background: transparent; 
+}
+
+/* 2. Star Layer 1: Smallest, Fastest, Medium Density */
+#stars-container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dot size is tiny (width/height is 1) */
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="19" y="19" width="1" height="1" fill="rgba(255, 255, 255, 0.7)"/></svg>') repeat;
+    
+    /* Spacing increased for less crowding (from 200px to 400px) */
+    background-size: 400px 400px; 
+    
+    /* Faster animation (80s) */
+    animation: moveStars 80s linear infinite; 
+    filter: blur(0.5px); 
+}
+
+/* 3. Star Layer 2: Medium Size, Medium Speed, Lowest Density */
+#stars-container:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dot size is slightly larger (width/height is 2) and less bright */
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="18" y="18" width="1" height="1" fill="rgba(255, 255, 255, 0.4)"/></svg>') repeat;
+    
+    /* Spacing significantly increased for very low density (350px to 600px) */
+    background-size: 600px 600px; 
+    
+    /* Slower animation for depth */
+    animation: moveStarsSlow 160s linear infinite; 
+    filter: blur(1px); 
+}
+
+/* 4. NEW: Star Layer 3: Slightly faster movement in a different direction */
+/* We use the container itself to create a third, very subtle layer */
+#stars-container {
+    /* Set a third, unique background pattern directly on the container */
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="19" y="19" width="1" height="1" fill="rgba(255, 255, 255, 0.6)"/></svg>') repeat;
+    background-size: 500px 500px; /* Different spacing than the others */
+    animation: moveStarsReverse 120s linear infinite; /* New speed and direction */
+    filter: blur(0.8px);
+}
+
+
+/* 5. Keyframes for the Movement */
+
+/* Main diagonal movement (Layer 1) */
+@keyframes moveStars {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        /* Reduced movement: 50% instead of 100% for a smaller path */
+        background-position: 50% 50%; 
+    }
+}
+
+/* Slower movement (Layer 2) */
+@keyframes moveStarsSlow {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        /* Reduced movement: 30% for a very small, deep path */
+        background-position: 30% 30%; 
+    }
+}
+
+/* Reverse movement (Layer 3) to break the pattern */
+@keyframes moveStarsReverse {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        /* Moves diagonally but in the opposite direction (top-right to bottom-left) */
+        background-position: -50% 50%; 
+    }
+}
