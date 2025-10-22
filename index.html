@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<div id="stars-container"></div>
+  <div id="stars-container"></div>
 
   <!-- HEADER / NAV -->
   <header>
@@ -229,16 +229,27 @@
 
     <!-- TESTIMONIALS -->
     <section id="testimonials" class="panel" data-aos="fade-up">
-      <div class="section-title">
+      <div class="section-title" >
         <h2>What <b>Clients</b> Say</h2>
         <p>Real feedback from people I've worked with.</p>
       </div>
-      <div class="testimonials-wrap">
+      <div class="testimonials-wrap" style="gap: 16px;
+    flex-wrap: wrap;">
         <figure class="testimonial" data-aos="fade-right">
           <blockquote>“Saqib built my website exactly how I wanted — professional, fast delivery and excellent
             communication. Highly recommended!”</blockquote>
           <div class="who">
             <img src="Imgs/Design By_result.webp" alt="AWAIS MEHAR">
+            <div><strong>AWAIS MEHAR</strong>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+        </figure>
+
+        <figure class="testimonial" data-aos="fade-right">
+          <blockquote>“Saqib delivered my portfolio under a day. 100% recommended!”</blockquote>
+          <div class="who">
+            <img src="Imgs/image-removebg-preview (2).png" alt="AWAIS MEHAR">
             <div><strong>AWAIS MEHAR</strong>
               <div class="stars">★★★★★</div>
             </div>
@@ -307,6 +318,7 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init();</script>
   <script src="script.js"></script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 
 </html>
