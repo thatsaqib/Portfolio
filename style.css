@@ -1,12 +1,12 @@
 :root {
-  --bg: #050611;
-  --panel: rgba(12, 18, 30, 0.6);
-  --glass: rgba(255, 255, 255, 0.03);
+  --bg: #000000;
+  --panel: rgb(0 0 0 / 60%);
+  --glass: rgb(0 0 0 / 3%);
   --accent: #1abcfe;
   --accent-2: #64d9ff;
   --muted: #9aa7b8;
-  --card: #0d1320; /* Darker, slightly opaque card color */
-  --glass-border: rgba(255, 255, 255, 0.06);
+  --card: #000000;
+  --glass-border: rgb(0 0 0 / 6%);
   --glass-glow: 0 6px 40px rgba(26, 188, 254, 0.06);
   --radius: 16px;
   --ff: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -560,6 +560,7 @@ footer {
 }
 
 @media(max-width: 768px) {
+
   /* Hiding Nav/Header elements */
   header,
   nav ul,
@@ -602,7 +603,8 @@ footer {
     align-items: center;
     padding: 20px;
     border-radius: 12px;
-    background: var(--card); /* Ensures visibility on mobile too */
+    background: var(--card);
+    /* Ensures visibility on mobile too */
     border: 1px solid rgba(255, 255, 255, 0.04);
     width: max-content;
     gap: 10px;
@@ -797,9 +799,9 @@ body {
   /* --- NEW GRID BACKGROUND STYLE with smaller size --- */
   --grid-color: rgba(26, 188, 254, 0.05);
   /* Light, transparent blue line color */
-  --grid-size: 15px;
+  --grid-size: 5px;
   /* Makes the grid boxes 15px x 15px */
-  --bg-color: #050611;
+  --bg-color: #000000;
   /* Your existing background variable */
 
   /* Create two linear gradients: one vertical, one horizontal */
