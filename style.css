@@ -791,32 +791,27 @@ img:not(.profile-pic) {
 
 /* --- Final Body & Background Styles --- */
 body {
-  /* Retain your existing font and color properties */
   font-family: var(--ff);
   color: #eaf6ff;
   -webkit-font-smoothing: antialiased;
-
-  /* --- NEW GRID BACKGROUND STYLE with smaller size --- */
   --grid-color: rgba(26, 188, 254, 0.05);
-  /* Light, transparent blue line color */
   --grid-size: 5px;
-  /* Makes the grid boxes 15px x 15px */
   --bg-color: #000000;
-  /* Your existing background variable */
 
-  /* Create two linear gradients: one vertical, one horizontal */
   background:
-    /* Horizontal lines */
-    linear-gradient(to right, var(--grid-color) 1px, transparent 1px) 0 0,
-    /* Vertical lines */
-    linear-gradient(to bottom, var(--grid-color) 1px, var(--bg-color) 1px) 0 0,
-    /* Original radial and linear gradient for the primary effect */
+    /* Horizontal lines (swapped) */
+    linear-gradient(to right, var(--bg-color) 1px, transparent 1px) 0 0,
+    /* Vertical lines (swapped) */
+    linear-gradient(to bottom, var(--bg-color) 1px, var(--grid-color) 1px) 0 0,
+    /* Radial & linear (keep same or adjust) */
     radial-gradient(1200px 600px at 10% 10%, rgba(26, 188, 254, 0.035), transparent 6%),
-    linear-gradient(180deg, #02030a 0%, var(--bg) 100%);
+    linear-gradient(180deg, #02030a 0%, var(--grid-color) 100%);
 
-  /* Define the size of the gradient tiles (the grid squares) */
-  background-size: var(--grid-size) var(--grid-size), var(--grid-size) var(--grid-size), auto, auto;
+  background-size: var(--grid-size) var(--grid-size),
+                   var(--grid-size) var(--grid-size),
+                   auto, auto;
 }
+
 
 /* --- STAR ANIMATION EFFECT: Optimized Density, Speed, and Layers --- */
 
