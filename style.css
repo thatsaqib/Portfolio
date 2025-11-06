@@ -34,6 +34,9 @@ body {
   line-height: 1.6;
 }
 
+section {
+  box-shadow: var(--glass-glow);
+}
 /* NAV */
 header {
   position: fixed;
@@ -791,24 +794,12 @@ img:not(.profile-pic) {
 
 /* --- Final Body & Background Styles --- */
 body {
-  font-family: var(--ff);
-  color: #eaf6ff;
-  -webkit-font-smoothing: antialiased;
-
-  background:
-  /* Horizontal grid lines */
-  linear-gradient(to right, rgba(26, 188, 254, 0.18) 1px, transparent 1px) 0 0,
-
-  /* Vertical grid lines */
-  linear-gradient(to bottom, rgba(26, 188, 254, 0.18) 1px, transparent 1px) 0 0,
-
-  /* Glow / depth */
-  radial-gradient(1200px 600px at 10% 10%, rgba(26,188,254,0.08), transparent 8%),
-
-  /* Base background */
-  linear-gradient(180deg, #000, #000);
-  background-size: 5px 5px, 5px 5px, auto, auto;
-  background-color: #000;
+    font-family: var(--ff);
+    color: #eaf6ff;
+    -webkit-font-smoothing: antialiased;
+    background: linear-gradient(180deg, #000000, #000000);
+    background-size: 5px 5px, 5px 5px, auto, auto;
+    background-color: #000000;
 }
 
 
