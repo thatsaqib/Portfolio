@@ -796,16 +796,18 @@ body {
   -webkit-font-smoothing: antialiased;
 
   background:
-    /* Horizontal lines */
-    linear-gradient(to right, black 1px, transparent 1px) 0 0,
-    /* Vertical lines */
-    linear-gradient(to bottom, black 1px, #030e17 1px) 0 0,
-    /* Radial and linear gradients for depth */
-    radial-gradient(1200px 600px at 10% 10%, rgba(26, 188, 254, 0.035), transparent 6%),
-    linear-gradient(180deg, #02030a 0%, #030e17 100%);
+    /* Horizontal grid lines */
+    linear-gradient(to right, gray 1px, transparent 1px) 0 0,
+    /* Vertical grid lines */
+    linear-gradient(to bottom, gray 1px, #000 1px) 0 0,
+    /* Optional subtle glow / depth */
+    radial-gradient(1200px 600px at 10% 10%, rgba(128, 128, 128, 0.05), transparent 6%),
+    linear-gradient(180deg, #000 0%, #000 100%);
 
   background-size: 5px 5px, 5px 5px, auto, auto;
+  background-color: #000;
 }
+
 
 
 /* --- STAR ANIMATION EFFECT: Optimized Density, Speed, and Layers --- */
