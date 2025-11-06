@@ -807,7 +807,6 @@ body {
 
   /* Base background */
   linear-gradient(180deg, #000, #000);
-
   background-size: 5px 5px, 5px 5px, auto, auto;
   background-color: #000;
 }
