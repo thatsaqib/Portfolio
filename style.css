@@ -903,3 +903,10 @@ body {
     background-position: -50% 50%;
   }
 }
+
+@media screen and (min-width: 1025px){
+  .view-all {
+    position: relative;
+    left: 100%;
+  }
+}
